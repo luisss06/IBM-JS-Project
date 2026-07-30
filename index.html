@@ -32,8 +32,8 @@
 
             <div class="search_bar">
                 <input type="text" placeholder="Enter a destination key word" id="searchInput">
-                <button class="btn">Search</button>
-                <button class="btn">Clear</button>
+                <button class="btn" id="searchButton" type="button">Search</button>
+                <button class="btn" id="clearButton" type="button">Clear</button>
 
             </div>
 
@@ -53,14 +53,7 @@
             <h2 style="color: var(--color-white);">
                 <br>Search results:
             </h2>
-            <!-- Add your search results here -->
-             <div class="card">
-                <img class="card-image" src="assets/images/tokyo.jpg" alt="Image">
-                <div class="card-content">
-                    <h3 class="card-title"></h3>
-                    <p class="description"></p>
-                </div>
-             </div>
+            <div id="resultsContainer"></div>
 
         </div>
     </section>
