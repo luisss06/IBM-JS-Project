@@ -138,6 +138,15 @@ nav.open {
     padding: 1rem;
 }
 
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
 .hero {
     width: 100%;
     color: var(--color-primary);
