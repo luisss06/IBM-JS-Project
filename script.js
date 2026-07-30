@@ -155,6 +155,21 @@ function searchRecommendations(data, query) {
         results.push({ ...item, type });
     };
 
+    const isCountriesQuery = normalizedQuery === 'countries' || normalizedQuery.includes('country');
+    const isTemplesQuery = normalizedQuery === 'temples' || normalizedQuery.includes('temple');
+
+    if (isCountriesQuery) {
+        data.countries.forEach((country) => {
+            country.cities.forEach((city) => addResult(city, 'city'));
+        });
+        return results;
+    }
+
+    if (isTemplesQuery) {
+        data.temples.forEach((temple) => addResult(temple, 'temple'));
+        return results;
+    }
+
     const countryMatch = data.countries.find((country) => normalizeText(country.name).includes(normalizedQuery));
 
     if (countryMatch) {
